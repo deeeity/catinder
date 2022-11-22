@@ -20,6 +20,16 @@ class NameView {
             _this._element.classList.remove('shake');
         }, 500);
     }
+
+    show() {
+        this._element.classList.remove('disappear');
+        this._element.classList.add('appear');
+    }
+
+    hide() {
+        this._element.classList.add('disappear');
+        this._element.classList.remove('appear');
+    }
 }
 
 export default new NameView();

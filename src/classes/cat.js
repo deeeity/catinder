@@ -1,4 +1,5 @@
 import LoaderView from '../views/loaderView.js';
+import NameView from '../views/nameView.js';
 
 class Cat {
     name = 'Cat';
@@ -11,6 +12,7 @@ class Cat {
 
         this.img.addEventListener('load', function () {
             LoaderView.stop();
+            NameView.show();
         });
 
         this.img.src = data.url;

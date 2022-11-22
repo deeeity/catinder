@@ -3,8 +3,7 @@ import CatView from './views/catView.js';
 import LoaderView from './views/loaderView.js';
 import FavsView from './views/favsView.js';
 import NameView from './views/nameView.js';
-import SearchView from './views/searchView.js';
-import searchView from './views/searchView.js';
+import SearchView from './views/SearchView.js';
 
 const clearDataBtn = document.querySelector('.btn-clear-data');
 
@@ -67,6 +66,7 @@ function filterCatSearch() {
 }
 
 function newCat() {
+    NameView.hide();
     LoaderView.start();
 
     setTimeout(function () {
@@ -86,7 +86,7 @@ FavsView.onRemove(function (id) {
     FavsView.remove(id);
     Model.removeFav(id);
 
-    if (!searchView.isEmpty()) {
+    if (!SearchView.isEmpty()) {
         SearchView.clear();
         filterCatSearch();
     }
