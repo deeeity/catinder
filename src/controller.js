@@ -53,6 +53,12 @@ function filterCatSearch() {
     searchTimeout = setTimeout(function () {
         const filteredCats = Model.getFavsByName(text);
 
+        if (!filteredCats.length) {
+            SearchView.showNoResults();
+        } else {
+            SearchView.hideNoResults();
+        }
+
         FavsView.loadFavs(filteredCats);
 
         clearTimeout(searchTimeout);

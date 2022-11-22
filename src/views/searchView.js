@@ -1,8 +1,17 @@
 class SearchView {
     _element = document.querySelector('.cat-search');
+    _noResultsText = document.querySelector('.cat-no-results');
 
     getText() {
         return this._element.value;
+    }
+
+    showNoResults() {
+        this._noResultsText.classList.remove('hide');
+    }
+
+    hideNoResults() {
+        this._noResultsText.classList.add('hide');
     }
 
     clear() {

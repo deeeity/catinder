@@ -37,6 +37,12 @@ body {
     position: relative;
 }
 
+.cat-no-results {
+    color: darkgray;
+    text-align: center;
+    margin-top: 2em;
+}
+
 .cat-preview {
     position: relative;
     aspect-ratio: 0.5;
