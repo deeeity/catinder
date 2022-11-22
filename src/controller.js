@@ -106,6 +106,8 @@ CatView.onLike(function () {
         return;
     }
 
+    SearchView.hideNoResults();
+    SearchView.clear();
     SearchView.show();
     FavsView.maximize();
     FavsView.setTitle('✨ Your Favorite Cats 😍');
@@ -119,6 +121,8 @@ CatView.onLike(function () {
 });
 
 CatView.onDislike(function () {
+    SearchView.hideNoResults();
+    SearchView.clear();
     LoaderView.setDislike();
     Model.dislikeCat(currentCat);
     newCat();
