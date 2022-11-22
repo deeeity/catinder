@@ -3,7 +3,7 @@ import CatView from './views/catView.js';
 import LoaderView from './views/loaderView.js';
 import FavsView from './views/favsView.js';
 import NameView from './views/nameView.js';
-import SearchView from './views/SearchView.js';
+import SearchView from './views/searchView.js';
 
 const clearDataBtn = document.querySelector('.btn-clear-data');
 
